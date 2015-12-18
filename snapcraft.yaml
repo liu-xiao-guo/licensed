@@ -1,0 +1,21 @@
+name: licensed
+version: 0.1
+vendor: XiaoGuo, Liu <xiaoguo.liu@canonical.com>
+summary: This is summary for licensed
+description: A simple demo showing how to show a licensded text
+icon: icon.png
+
+binaries:
+  printenv:
+    exec: bin/printenv
+
+license:
+  text: This is the licesnse text
+  accept-required: yes
+
+parts:
+  print:
+    plugin: copy
+    files:
+      ./bin/printenv: bin/printenv
+      ./license.txt: license.txt
